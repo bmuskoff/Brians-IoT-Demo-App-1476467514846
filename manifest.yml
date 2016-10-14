@@ -1,0 +1,12 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: Brians IoT Demo App
+  host: Brians-IoT-Demo-App
+  disk_quota: 1024M
+  services:
+  - Brians IoT Demo App-cloudantNoSQLDB
+  - Brians IoT Demo App-iotf-service
+  command: node --max-old-space-size=384 node_modules/node-red/red.js --settings ./bluemix-settings.js -v
